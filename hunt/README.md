@@ -34,3 +34,4 @@ A few key gems to read up on for this project are the following:
 | Resource                                                                     |                    Description                     |
 | ---------------------------------------------------------------------------- | :------------------------------------------------: |
 | [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) | A CSS & Javascript Framework For Building Websites |
+| [SimpleForm Bootstrap](http://simple-form-bootstrap.plataformatec.com.br/)   |     Examples of using SimpleForm w/ Bootstrap      |
