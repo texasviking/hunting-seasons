@@ -28,3 +28,9 @@ A few key gems to read up on for this project are the following:
 | Gem                                                     |       Purpose       |
 | ------------------------------------------------------- | :-----------------: |
 | [SimpleForm](https://github.com/heartcombo/simple_form) | Simplified Form DSL |
+
+## Additional Resources
+
+| Resource                                                                     |                    Description                     |
+| ---------------------------------------------------------------------------- | :------------------------------------------------: |
+| [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) | A CSS & Javascript Framework For Building Websites |
