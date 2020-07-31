@@ -1,2 +1,9 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
+
+<%= link_to '<button type="button" class="btn btn-dark">View all Animals</button>'.html_safe, '/' %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class=><%=@animal.name%></h5>
+    <p class="card-text">Animal: <%=@animal.category%></p>
+    <p class="card-text">State: <%=@animal.state%></p>
+  </div>
+</div>
