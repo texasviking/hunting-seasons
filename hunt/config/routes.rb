@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
+  resources :animals
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get 'animal_search/index'
-
-  root 'animal_search#index'
+  root 'animals#index'
 end
