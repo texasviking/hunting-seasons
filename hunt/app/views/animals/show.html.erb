@@ -1,2 +1,16 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= link_to 'View All Animals', animals_path, class: 'btn btn-dark' %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-header"><%=@animal.name%></div>
+        <div class="card-body">
+          <p class="card-text">Category: <%=@animal.category%></p>
+          <p class="card-text">State: <%=@animal.state%></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
