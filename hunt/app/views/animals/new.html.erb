@@ -8,8 +8,8 @@
             <%= simple_form_for @animal do |f| %>
               <%= f.error_notification %>
               <%= f.input :name, required: true, error: "Name can't be blank" %>
-              <%= f.input :state, collection:$STATES, required: true, error: "State can't be blank"%>
-              <%= f.input :category, collection: $CATEGORIES, required: true, error: "Category can't be blank"%>
+              <%= f.input :state, collection:Animal::STATES, required: true, error: "State can't be blank"%>
+              <%= f.input :category, collection: Animal::CATEGORIES, required: true, error: "Category can't be blank"%>
 
               Create an Animal<%=f.submit class: 'btn btn-dark'%>
               <%= link_to 'Cancel', animals_path, class: 'btn btn-light' %>
