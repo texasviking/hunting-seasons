@@ -1,9 +1,13 @@
 <ul>
+<%= link_to 'New Animals', new_animal_url, class: 'btn btn-dark' %>
   <% @animals.each do |animal| %>
 
     <div class="container">
+
       <div class="row">
+
         <div class="col-sm">
+
           <li>Name: <%= link_to animal.name, animal_path(animal)  %></li>
         </div>
         <div class="col-sm">

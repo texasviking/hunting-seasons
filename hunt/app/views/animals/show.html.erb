@@ -1,15 +1,16 @@
 
 
 <div class="container">
+<%= link_to 'View All Animals', animals_path, class: 'btn btn-dark' %>
   <div class="row">
     <div class="col">
-      <%= link_to 'View All Animals', animals_path, class: 'btn btn-dark' %>
       <div class="card" style="width: 18rem;">
         <div class="card-header"><%=@animal.name%></div>
         <div class="card-body">
           <p class="card-text">Category: <%=@animal.category%></p>
           <p class="card-text">State: <%=@animal.state%></p>
         </div>
+        <%= link_to 'Remove', @dog, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     </div>
   </div>

@@ -1,2 +1,20 @@
-<h1>Animals#new</h1>
-<p>Find me in app/views/animals/new.html.erb</p>
+<div class="card w-100" style="width: 18rem;">
+         <div class = "card-header"><h3>Create an Animal</h3></div>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-12">
+
+                <%= simple_form_for @animal do |f| %>
+                <%f.error_notification %>
+                <%= f.input :name%>
+                <%= f.input :state, collection: $STATES%>
+
+                <%= f.input :category, collection: $CATEGORIES%>
+
+                <%= f.button :submit, class: "btn btn-dark" %>
+                <%= link_to 'Cancel', animals_path, class: 'btn btn-light' %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
