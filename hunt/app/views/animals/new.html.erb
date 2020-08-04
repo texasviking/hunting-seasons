@@ -1,2 +1,22 @@
-<h1>Animals#new</h1>
-<p>Find me in app/views/animals/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">Create an Animal</div>
+          <div class="card-body">
+
+            <%= simple_form_for @animal do |f| %>
+              <%= f.error_notification %>
+              <%= f.input :name, required: true, error: "Name can't be blank" %>
+              <%= f.input :state, collection:Animal::STATES, required: true, error: "State can't be blank"%>
+              <%= f.input :category, collection: Animal::CATEGORIES, required: true, error: "Category can't be blank"%>
+
+              <%=f.submit class: 'btn btn-dark'%>
+              <%= link_to 'Cancel', animals_path, class: 'btn btn-light' %>
+            <% end %>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
