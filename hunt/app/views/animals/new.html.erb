@@ -11,7 +11,7 @@
               <%= f.input :state, collection:$STATES, required: true, error: "State can't be blank"%>
               <%= f.input :category, collection: $CATEGORIES, required: true, error: "Category can't be blank"%>
 
-              <button class='btn btn-dark'>Create an Animal<% f.button :submit %></button>
+              Create an Animal<%=f.submit class: 'btn btn-dark'%>
               <%= link_to 'Cancel', animals_path, class: 'btn btn-light' %>
             <% end %>
             
