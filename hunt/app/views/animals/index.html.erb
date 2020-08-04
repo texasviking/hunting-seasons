@@ -1,19 +1,36 @@
-<ul>
-  <%= link_to 'New Animal', new_animal_path, class: 'btn btn-dark' %>
-  <% @animals.each do |animal| %>
+<div class="container">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          <li>Name: <%= link_to animal.name, animal_path(animal)  %></li>
-        </div>
-        <div class="col-sm">
-          State: <%=animal.state%>
-        </div>
-        <div class="col-sm">
-          Category: <%=animal.category %>
-        </div>
-      </div>
+  <div class="row mb-3">
+    <div class="col">
+    <%= link_to 'New Animal', new_animal_path, class: 'btn btn-dark' %>
+    </div>
   </div>
-  <% end %>
-</ul>
+
+  <div class="row">
+    <div class="col">
+      <table class = "table table-hover">
+
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">State</th>
+            <th scope="col">Category</th>
+          </tr>
+        </thead>
+
+        <% @animals.each do |animal| %>
+          <tbody>
+            <tr>
+                <td> <%= link_to animal.name, animal_path(animal) %> </td>
+                <td> <%= animal.state %> </td>
+                <td> <%=animal.category %> </td>
+            </tr>
+          </tbody>
+
+          <% end %>
+      </table>
+    </div>
+</div>
+
+
+</div>
