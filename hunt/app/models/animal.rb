@@ -2,7 +2,7 @@ class Animal < ApplicationRecord
   validates :name, presence: true
   validates :category, presence: true
   validates :state, presence: true
-  $CATEGORIES = ['big game','small game','migratory birds', 'fur', 'saltwater fishing', 'freshwater fishing']
+  $CATEGORIES = ['Big Game','Small Game','Migratory Birds', 'Fur', 'Saltwater Fishing', 'Freshwater Fishing']
 
 
   $STATES = []
