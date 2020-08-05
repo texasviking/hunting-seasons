@@ -17,12 +17,22 @@ class AnimalsController < ApplicationController
     if @animal.save
       redirect_to animals_path
     else
-      render action: 'new'
+      render :new
     end
   end
 
   def edit
+    @animal = Animal.find(params[:id])
+  end
 
+  def update
+    @animal = Animal.find(params[:id])
+
+    if @animal.update(animal_params)
+      redirect_to animal_path(@animal)
+    else
+      render :edit
+    end
   end
 
   private
