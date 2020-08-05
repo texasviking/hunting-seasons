@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= simple_form_for @animal do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :name %>
+        <%= f.input :state, collection:Animal::STATES %>
+        <%= f.input :category, collection: Animal::CATEGORIES %>
+        <%=f.submit class: 'btn btn-dark'%>
+        <%= link_to "Cancel", cancel_url, class: "btn btn-light" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,21 +1,14 @@
-
-
 <div class="container">
   <div class="row">
     <div class="col">
       <%= link_to 'View All Animals', animals_path, class: 'btn btn-dark' %>
-      <div class="card">
+      <div class="card mt-2">
         <div class="card-header"><%=@animal.name%></div>
         <div class="card-body">
 
 
           <p class="card-text">State: <%=@animal.state%></p>
-
-
-          <p class="card-text">Category: <%=@animal.category%></p>
-
-
-          <%= link_to 'Edit', edit_animal_path(@animal), class: 'btn btn-dark' %>
+          <%= link_to 'Edit', edit_animal_path, class: 'btn btn-dark' %>
         </div>
 
       </div>
