@@ -28,6 +28,7 @@ A few key gems to read up on for this project are the following:
 | Gem                                                     |       Purpose       |
 | ------------------------------------------------------- | :-----------------: |
 | [SimpleForm](https://github.com/heartcombo/simple_form) | Simplified Form DSL |
+| [Roo](https://github.com/roo-rb/roo)                    | Spreadsheet Parser  |
 
 ## Additional Resources
 
