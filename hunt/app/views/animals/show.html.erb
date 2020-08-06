@@ -1,15 +1,18 @@
+
+
 <div class="container">
   <div class="row">
     <div class="col">
       <%= link_to 'View All Animals', animals_path, class: 'btn btn-dark' %>
-      <div class="card mt-2">
+      <div class="card">
         <div class="card-header"><%=@animal.name%></div>
         <div class="card-body">
-          <p class="card-text">Category: <%=@animal.category%></p>
           <p class="card-text">State: <%=@animal.state%></p>
-          <%= link_to 'Edit', edit_animal_path, class: 'btn btn-dark' %>
-        </div>
-
+          <p class="card-text">Category: <%=@animal.category%></%></p>
+          <div class="d-flex justify-content-end">
+            <%= link_to 'Edit', edit_animal_path, class: 'btn btn-dark  mr-2' %>
+              <%= button_to 'Delete', animal_path(@animal), method: 'delete', data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          </div>
       </div>
     </div>
   </div>

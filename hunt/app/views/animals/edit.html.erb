@@ -4,7 +4,7 @@
       <div class="card">
         <div class="card-header"><%= 'Edit ' + @animal.name %></div>
         <div class="card-body">
-          <%= render partial: "form", locals: {cancel_url: animal_path} %>
+          <%= render partial: "form", locals: {post: @animal, cancel_url: animal_path} %>
 
         </div>
       </div>

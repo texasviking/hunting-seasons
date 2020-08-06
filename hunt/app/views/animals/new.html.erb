@@ -5,7 +5,7 @@
         <div class="card-header">Create an Animal</div>
           <div class="card-body">
 
-            <%= render partial: "form", locals: {cancel_url: animals_path} %>
+            <%= render partial: "form", locals: {post: @animal, cancel_url: animals_path} %>
 
           </div>
         </div>

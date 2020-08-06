@@ -6,6 +6,4 @@ class Animal < ApplicationRecord
   file = File.open("states")
   STATES = file.readlines.map(&:chomp)
   file.close
-
-
-end
+  end
