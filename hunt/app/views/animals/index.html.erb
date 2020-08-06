@@ -12,7 +12,7 @@
           </thead>
           <tbody>
             <% @animals.each do |animal| %>
-              <tr>
+              <tr class="clickable-row" href=<%animal_path(animal)%>>
                 <td><%= link_to animal.name, animal_path(animal)%></td>
                 <td><%=animal.state%></td>
                 <td><%=animal.category%></td>
