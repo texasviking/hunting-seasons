@@ -13,9 +13,9 @@
           <tbody>
             <% @animals.each do |animal| %>
               <tr>
-              <td><%= link_to animal.name, animal_path(animal)%></td>
-              <td><%=animal.state%></td>
-              <td><%=animal.category%></td>
+                <td><%= link_to animal.name, animal_path(animal)%></td>
+                <td><%=animal.state%></td>
+                <td><%=animal.category%></td>
               </tr>
             <% end %>
           </tbody>
