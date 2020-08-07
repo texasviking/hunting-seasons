@@ -12,15 +12,15 @@
           </thead>
           <tbody>
 
-            <%@numRows = 0%>
+
             <% @animals.each do |animal| %>
 
               <tr onclick="displayAnimal('<% link_to %>', '<%=animal_path(animal)%>')">
                 <td><%=animal.name%></td>
                 <td><%=animal.state%></td>
                 <td><%=animal.category%></td>
-                <%@numRows+=1%>
               </tr>
+              
             <% end %>
             <script>
               function displayAnimal(path, linkToAnimal) {
