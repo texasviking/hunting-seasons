@@ -11,13 +11,27 @@
             </tr>
           </thead>
           <tbody>
+
+            <%@numRows = 0%>
             <% @animals.each do |animal| %>
-              <tr>
-                <td><%= link_to animal.name, animal_path(animal)%></td>
+
+              <tr onclick="displayAnimal('<% link_to %>', '<%=animal_path(animal)%>')">
+                <td><%=animal.name%></td>
                 <td><%=animal.state%></td>
                 <td><%=animal.category%></td>
+                <%@numRows+=1%>
               </tr>
             <% end %>
+            <script>
+              function displayAnimal(path, linkToAnimal) {
+
+                //const anim = document.querySelector('#'+'anim');
+                //window.location.replace("http://localhost:3000"+"%>")
+                //window.location.replace("http://localhost:3000"+linkToAnimal);
+                window.location.replace(path+linkToAnimal);
+                //document.getElementById("field2").value = linkToAnimal//JSON.parse(linkToAnimal)
+              }
+            </script>
           </tbody>
         </table>
       </div>
