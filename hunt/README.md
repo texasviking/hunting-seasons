@@ -40,4 +40,4 @@ A few key gems to read up on for this project are the following:
 ## Running the Rake Task for Animal Import from Spreadsheet
 
 - Make sure you are in the hunt directory in the terminal.
-- Type "rake import:animals" to run the rake task.
+- Type ```rake import:animals``` to run the rake task.
