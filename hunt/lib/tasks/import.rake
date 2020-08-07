@@ -25,9 +25,12 @@ namespace :import do
 
       else
         try{
-        Animal.create!(name: animal, state: state, category: category)
-        numAnimalsAdded+=1
-      }
+          Animal.create!(name: animal, state: state, category: category)
+          numAnimalsAdded+=1
+        }
+        catch{
+          puts "Failed to import animal: #{animal}, #{category}, #{state}"
+        }
 
       end
     end
