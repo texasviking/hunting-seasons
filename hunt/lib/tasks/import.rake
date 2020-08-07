@@ -24,10 +24,9 @@ namespace :import do
       if Animal.where(name: animal, state:state, category:category).exists?
 
       else
-        try{
         Animal.create!(name: animal, state: state, category: category)
         numAnimalsAdded+=1
-      }
+      
 
       end
     end

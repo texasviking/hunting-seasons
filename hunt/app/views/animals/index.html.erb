@@ -15,7 +15,7 @@
             <%@numRows = 0%>
             <% @animals.each do |animal| %>
 
-              <tr onclick="displayAnimal('<% link_to %>', '<%=animal_path(animal)%>')">
+              <tr cursor="pointer" onclick="displayAnimal('<% link_to %>', '<%=animal_path(animal)%>')">
                 <td><%=animal.name%></td>
                 <td><%=animal.state%></td>
                 <td><%=animal.category%></td>
