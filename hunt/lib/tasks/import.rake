@@ -25,11 +25,17 @@ namespace :import do
         next
       end
 
-      Animal.create!(state: row[0].to_s.titleize,
+      animal = Animal.new(state: row[0].to_s.titleize,
         name: row[1].to_s.titleize, category: row[2].to_s)
+
+      if !animal.save
+        puts "Fail to import animal: #{row}"
+        next
+      end
+
       num_animals += 1
     end
-
+    
     puts "Done"
     puts "#{num_animals} animals were imported."
   end
