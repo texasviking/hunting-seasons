@@ -14,26 +14,7 @@ namespace :import do
     #puts "The data headers are: #{headers}"
 
     # For each row in the file, create a new animal below:
-    numAnimalsAdded = 0
-    data.parse.each do |row|
-
-      state = row[0].to_s.titleize
-      animal = row[1].to_s.titleize
-      category = row[2].to_s
-
-      if Animal.where(name: animal, state:state, category:category).exists?
-        next
-      end
-
-      if Animal.new(name: animal, state: state, category: category).save
-        numAnimalsAdded+=1
-      else
-        puts "Failed to import animal: #{animal}, #{category}, #{state}"
-
-      end
-
-    end
-    puts "The number of animals that were added to the database are: #{numAnimalsAdded}"
+    
     
 
 
