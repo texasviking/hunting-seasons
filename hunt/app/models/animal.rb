@@ -8,5 +8,4 @@ class Animal < ApplicationRecord
   STATES = file.readlines.map(&:chomp)
   file.close
 
-
 end

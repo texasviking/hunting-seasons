@@ -14,6 +14,9 @@ namespace :import do
     #puts "The data headers are: #{headers}"
 
     # For each row in the file, create a new animal below:
+    
+    
+
 
     num_animals = 0
 

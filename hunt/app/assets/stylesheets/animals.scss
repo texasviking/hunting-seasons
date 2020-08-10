@@ -9,3 +9,9 @@
     text-overflow: ellipsis;
   }
 }
+
+.table-clickable{
+  td{
+    cursor: pointer
+  }
+}
