@@ -15,20 +15,21 @@
 
             <% @animals.each do |animal| %>
 
-              <tr onclick="displayAnimal('<% link_to %>', '<%=animal_path(animal)%>')">
+              <tr onclick="displayAnimal('<%=animal_path(animal)%>')">
                 <td><%=animal.name%></td>
                 <td><%=animal.state%></td>
                 <td><%=animal.category%></td>
               </tr>
               
             <% end %>
-            <script>
-              function displayAnimal(path, linkToAnimal) {
-                window.location.replace(path+linkToAnimal);
-              }
-            </script>
+            
           </tbody>
         </table>
       </div>
     </div>
   </div>
+<script>
+  function displayAnimal(linkToAnimal) {
+    window.location.assign(linkToAnimal);
+  }
+</script>
