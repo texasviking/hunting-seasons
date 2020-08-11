@@ -9,6 +9,8 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def ramya
+  end
 
   def show
 
