@@ -15,3 +15,13 @@
     cursor: pointer
   }
 }
+
+.abt-card-hover:hover{
+  opacity: 1;
+  transition: 0.3s
+}
+
+.abt-card-normal{
+  opacity: .5;
+  transition: 0.3s
+}
