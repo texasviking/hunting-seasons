@@ -2,7 +2,12 @@ class AnimalsController < ApplicationController
   before_action :current_animal, only: [:show, :edit, :update, :destroy]
 
   def index
-    @animals = Animal.all
+    if params["search"].present?
+      @animals = Animal.search(params["search"])
+    else
+      @animals = Animal.all
+    end
+
   end
 
   def show
@@ -28,8 +33,6 @@ class AnimalsController < ApplicationController
   end
 
   def update
-
-
     if @animal.update(animal_params)
       redirect_to animal_path(@animal)
     else
