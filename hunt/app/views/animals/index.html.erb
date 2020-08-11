@@ -1,7 +1,7 @@
  <div class="container">
    <div class="row">
      <div class="col">
-       <%= link_to 'New Animal', new_animal_path, class: 'btn btn-dark' %>
+
 
          <div class="card-header mt-2">
            <%= simple_form_for :search, url: animals_path, method: "GET" do |f| %>
@@ -18,9 +18,14 @@
                <div class="col">
                  <%= f.input :category, collection: Animal::CATEGORIES, selected: params.dig(:search, :category) , required: false, include_blank: true%>
                </div>
+
              </div>
 
+
              <div class="d-flex justify-content-end">
+               <div class="col" style="padding:0px;">
+                  <%= link_to 'New Animal', new_animal_path, class: 'btn btn-dark' %>
+               </div>
                 <%= link_to "Reset", root_path, class: "btn btn-light mr-1" %>
                 <%= f.submit "Search", class: "btn btn-dark" %>
              </div>
