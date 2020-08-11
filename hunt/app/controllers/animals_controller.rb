@@ -3,6 +3,17 @@ class AnimalsController < ApplicationController
 
   def index
     @animals = Animal.all
+    if params[:search]
+      @name = params["search"]["name".to_sym]
+      @state = params["search"]["name".to_sym]
+      @category = params["search"]["name".to_sym]
+      %w(name state category).each do |filter|
+          unless params["search"][filter.to_sym].nil? || params["search"][filter.to_sym]==""
+            @animals = @animals.where(filter => params["search"][filter.to_sym].titleize)
+
+        end
+      end
+    end
   end
 
   def show
@@ -43,6 +54,7 @@ class AnimalsController < ApplicationController
 
     redirect_to animals_path
   end
+
 
   private
 

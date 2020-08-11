@@ -2,6 +2,19 @@
    <div class="row">
      <div class="col">
        <%= link_to 'New Animal', new_animal_path, class: 'btn btn-dark' %>
+       <div class="p-3 mb-2 bg-light text-dark">
+         <%= simple_form_for :search, url: root_path, method: "GET"  do |f| %>
+       <div class = "row">
+       <div class = "col">Name<%= f.input :name, selected: params.dig(:search, :name),label: false, include_blank: true, require: false%></div>
+       <div class = "col">State<%= f.input :state, collection: Animal::STATES, selected: params.dig(:search, :state), label: false, include_blank: true, require: false%></div>
+       <div class = "col">Category<%= f.input :category, collection: Animal::CATEGORIES, selected: params.dig(:search, :category), label: false, include_blank: true, require: false%></div>
+     </div>
+     <div class="d-flex justify-content-end">
+       <%=f.submit "Search", class: 'btn btn-dark'%>
+       <%= link_to "Reset", root_path, class: "btn btn-light" %>
+    </div>
+       <% end %>
+       </div>
        <table class="table table-hover mt-2 table-clickable">
           <thead class="thead-dark">
             <tr>
@@ -20,9 +33,9 @@
                 <td><%=animal.state%></td>
                 <td><%=animal.category%></td>
               </tr>
-              
+
             <% end %>
-            
+
           </tbody>
         </table>
       </div>
