@@ -31,7 +31,7 @@ RSpec.describe Animal, type: :model do
       expect(animal.errors.full_messages).to include("State is not included in the list")
     end
 
-    it "is not valid without a state in the CATEGORIES list" do
+    it "is not valid without a category in the CATEGORIES list" do
       animal = Animal.new(category: "Big Fur")
       expect(animal).to_not be_valid
       expect(animal.errors.full_messages).to include("Category is not included in the list")
