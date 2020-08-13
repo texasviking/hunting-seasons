@@ -55,7 +55,7 @@ class AnimalsController < ApplicationController
 
 
   def animal_params
-    params.require(:animal).permit(:name, :state, :category)
+    params.require(:animal).permit(:name, :state, :category, :description, :season_open, :season_close)
   end
 
   def current_animal

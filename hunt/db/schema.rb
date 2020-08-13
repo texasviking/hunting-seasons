@@ -16,6 +16,9 @@ ActiveRecord::Schema.define(version: 2020_07_31_184546) do
     t.string "name"
     t.string "category"
     t.string "state"
+    t.text "description"
+    t.date "season_open"
+    t.date "season_close"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

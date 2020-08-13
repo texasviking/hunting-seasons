@@ -4,6 +4,9 @@ class CreateAnimals < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :category
       t.string :state
+      t.text :description
+      t.date :season_open
+      t.date :season_close
 
       t.timestamps
     end
