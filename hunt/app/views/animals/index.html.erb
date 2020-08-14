@@ -48,7 +48,11 @@
               <td><%=animal.state%></td>
               <td><%=animal.category%></td>
               <td>
-                animal.season_open&.strftime('%b %d %Y') + " - " + animal.season_closed&.strftime('%b %d %Y')
+                <%= if animal.season_open&.strftime('%b %d %Y')
+                      animal.season_open&.strftime('%b %d %Y') + animal.season_close&.strftime('%b %d %Y')&.prepend(" - ").to_s
+                  else
+                    animal.season_close&.strftime('%b %d %Y')&.to_str
+                end %>
               </td>
 
             </tr>
