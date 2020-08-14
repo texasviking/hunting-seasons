@@ -12,6 +12,9 @@ class AnimalsController < ApplicationController
   def ramya
   end
 
+  def mabel
+  end
+
   def show
 
   end
