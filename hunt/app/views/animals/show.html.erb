@@ -10,11 +10,11 @@
 
           <p class="card-text">State: <%=@animal.state%></p>
           <p class="card-text">Category: <%=@animal.category%></p>
-          <p class="card-text">Season:
+          <p class="card-text">
             <%= if @animal.season_open&.strftime('%b %d %Y')
-                  @animal.season_open&.strftime('%b %d %Y') + @animal.season_close&.strftime('%b %d %Y')&.prepend(" - ").to_s
+                @animal.season_open&.strftime('%b %d %Y')&.prepend("Season: ") + @animal.season_close&.strftime('%b %d %Y')&.prepend(" - ").to_s
               else
-                @animal.season_close&.strftime('%b %d %Y')&.to_str
+                @animal.season_close&.strftime('%b %d %Y')&.prepend("Season: ")&.to_str
             end %>
           <p class="card-text">Description: <%= @animal.description%><p>
 
