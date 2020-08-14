@@ -6,6 +6,9 @@
         <%= f.input :name %>
         <%= f.input :state, collection:Animal::STATES %>
         <%= f.input :category, collection: Animal::CATEGORIES %>
+        <%= f.input :description %>
+        <%= f.input :season_open, :include_blank => true %>
+        <%= f.input :season_close, :include_blank => true %>
         <%=f.submit class: 'btn btn-dark'%>
         <%= link_to "Cancel", cancel_url, class: "btn btn-light" %>
       <% end %>

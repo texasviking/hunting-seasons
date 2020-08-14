@@ -38,6 +38,7 @@
             <th scope="col">Name</th>
             <th scope="col">State</th>
             <th scope="col">Category</th>
+            <th scope="col">Season</th>
           </tr>
         </thead>
         <tbody>
@@ -46,6 +47,14 @@
               <td><%=animal.name%></td>
               <td><%=animal.state%></td>
               <td><%=animal.category%></td>
+              <td>
+                <%= if animal.season_open&.strftime('%b %d %Y')
+                      animal.season_open&.strftime('%b %d %Y') + animal.season_close&.strftime('%b %d %Y')&.prepend(" - ").to_s
+                  else
+                    animal.season_close&.strftime('%b %d %Y')&.to_str
+                end %>
+              </td>
+
             </tr>
           <% end %>
         </tbody>
@@ -59,4 +68,3 @@
    window.location.assign(linkToAnimal);
  }
 </script>
-

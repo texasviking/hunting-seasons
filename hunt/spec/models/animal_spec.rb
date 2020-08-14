@@ -25,6 +25,21 @@ RSpec.describe Animal, type: :model do
       expect(animal.errors.full_messages).to include("Category can't be blank")
     end
 
+    it "is valid without a description" do
+      animal = Animal.new(name: "Antelope", state: "Texas", category: "Big Game", description: nil)
+      expect(animal).to be_valid
+    end
+
+    it "is valid without a season open date" do
+      animal = Animal.new(name: "Antelope", state: "Texas", category: "Big Game", season_open: nil)
+      expect(animal).to be_valid
+    end
+
+    it "is valid without a season closed date" do
+      animal = Animal.new(name: "Antelope", state: "Texas", category: "Big Game", season_close: nil)
+      expect(animal).to be_valid
+    end
+
     it "is not valid without a state in the STATES list" do
       animal = Animal.new(state: "London")
       expect(animal).to_not be_valid
